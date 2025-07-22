@@ -10,13 +10,20 @@ from scipy.sparse import csr_matrix, hstack
 from predict import predict_popularity
 from graphs import *
 from evaluation import *
+from about import *
+from predict_url import *
 
 # Load all required objects
 model = joblib.load("model.pkl")
 tfidf = joblib.load("tfidf_vectorizer.pkl")
 X_cat_columns = joblib.load("X_cat_columns.pkl")
 scaler = joblib.load("scaler.pkl")
-
+st.set_page_config(
+    page_title="Course_Popularity_Predictor",
+    page_icon="🚀",
+    layout="wide",  # or "centered"
+    initial_sidebar_state="expanded"
+)
 st.title("📈 ML Model to Predict Course Popularity")
 
 # Initialize session state
@@ -31,7 +38,10 @@ if st.sidebar.button("Show Graphs"):
     st.session_state.mode = "graphs"
 if st.sidebar.button("Model Evaluation"):
     st.session_state.mode = "evaluation"
-
+if st.sidebar.button("About Model"):
+    st.session_state.mode="about"
+if st.sidebar.button("Predict by url"):
+    st.session_state.mode="predictbyurl"
 # --- Main Section Based on Mode ---
 if st.session_state.mode == "predict":
     st.header("Course Popularity Prediction")
@@ -68,20 +78,21 @@ if st.session_state.mode == "predict":
         predicted_label, popularity_prob = predict_popularity(input_df, tfidf, scaler, X_cat_columns, model)
         st.session_state["predicted_label"] = predicted_label
         st.session_state["popularity_prob"] = popularity_prob
+        
 
     # Display results
     if "predicted_label" in st.session_state:
         prob = st.session_state["popularity_prob"]
         label = st.session_state["predicted_label"]
         if prob >= 0.5:
-            st.success(f"Predicted is_popular: {label}")
+            st.success(f"Predicted is_popular: Yes")
         else:
-            st.warning(f"Predicted is_popular: {label}")
+            st.warning(f"Predicted is_popular: No")
         st.write(f"Popularity probability: {prob * 100:.2f}%")
-
 elif st.session_state.mode == "graphs":
     st.header("Graphs Section")
     df = pd.read_csv("udemy_online_education_courses_dataset.csv")
+    
     df['is_popular'] = (df['num_subscribers'] > 1000).astype(int)
     # Dropdown for graph selection
     selected_plot = st.selectbox("Choose a graph to display:", [
@@ -135,4 +146,7 @@ elif st.session_state.mode == "evaluation":
             show_roc_curve()
         elif eval_option == "Score":
             show_score()
-
+elif st.session_state.mode == "about":
+    show_about()
+elif st.session_state.mode=="predictbyurl":
+    predict_by_url()
