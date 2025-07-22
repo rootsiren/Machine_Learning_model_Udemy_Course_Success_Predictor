@@ -7,10 +7,4 @@ scikit-learn
 joblib
 pandas
 matplotlib
-graphs
-predict
-predict_url
-about
-evaluation
-matplotlib
 seaborn
