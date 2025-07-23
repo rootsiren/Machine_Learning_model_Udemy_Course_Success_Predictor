@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-def redict_by_url():
+def predict_by_url():
     st.set_page_config(page_title="Udemy Course Predictor", layout="centered")
 
     st.title("📘 Udemy Course Success Predictor")
