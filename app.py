@@ -40,8 +40,6 @@ if st.sidebar.button("Model Evaluation"):
     st.session_state.mode = "evaluation"
 if st.sidebar.button("About Model"):
     st.session_state.mode="about"
-if st.sidebar.button("Predict by url"):
-    st.session_state.mode="predictbyurl"
 # --- Main Section Based on Mode ---
 if st.session_state.mode == "predict":
     st.header("Course Popularity Prediction")
@@ -148,5 +146,3 @@ elif st.session_state.mode == "evaluation":
             show_score()
 elif st.session_state.mode == "about":
     show_about()
-elif st.session_state.mode=="predictbyurl":
-    predict_by_url()
