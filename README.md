@@ -4,7 +4,7 @@ A machine learning web app that predicts whether a Udemy course will be successf
 
 ---
 
-🔗 **Live App:** [(https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/)](#)  
+🔗 **Live App:** [https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/](#)  
 
 ---
 
