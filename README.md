@@ -53,5 +53,15 @@ Enter values such as:
 - View prediction: “Successful” or “Not Successful”  
 - Get confidence score (e.g., 84% confident)  
 - Explore visualizations showing influential features  
+## 🚀 Future Enhancements
 
+- [ ] Adding URL section and by Providing URL ,it should fetch the above details and make the predictions
 
+## 🛠 Installation
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/rootsiren/Machine_Learning_model_Udemy_Course_Success_Predictor.git
+cd Machine_Learning_model_Udemy_Course_Success_Predictor
+pip install -r requirements.txt
