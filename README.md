@@ -58,10 +58,17 @@ Enter values such as:
 - [ ] Adding URL section and by Providing URL ,it should fetch the above details and make the predictions
 
 ## 🛠 Installation
+## 🙋‍♂️ Author
+
+Created by [Shreenidhi Bhat](https://github.com/rootsiren).
 
 Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/rootsiren/Machine_Learning_model_Udemy_Course_Success_Predictor.git
 cd Machine_Learning_model_Udemy_Course_Success_Predictor
-pip install -r requirements.txt
+pip install -r requirements.txt 
+
+## 🙋‍♂️ Author
+
+Created by [Your Name](https://github.com/rootsiren).
