@@ -4,7 +4,7 @@ A machine learning web app that predicts whether a Udemy course will be successf
 
 ---
 
-🔗 **Live App:** []([https://reactjs.org](https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/).
+🔗 **Live App:**(https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/).
 
 ---
 
@@ -37,7 +37,7 @@ This project predicts the success of a Udemy course using machine learning based
 ## 🧪 How to Use
 
 ### 🎯 Step 1: Open the Web App  
-Visit the deployed Streamlit interface:[]([https://reactjs.org](https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/).
+Visit the deployed Streamlit interface:(https://machine-learning-model-udemy-course-success-predictor-nqp94qbb.streamlit.app/).
 
 
 ### ✍️ Step 2: Fill in Course Details  
