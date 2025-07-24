@@ -11,7 +11,6 @@ from predict import predict_popularity
 from graphs import *
 from evaluation import *
 from about import *
-from predict_url import *
 
 # Load all required objects
 model = joblib.load("model.pkl")
