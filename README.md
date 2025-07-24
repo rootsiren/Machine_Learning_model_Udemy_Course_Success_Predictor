@@ -69,6 +69,3 @@ git clone https://github.com/rootsiren/Machine_Learning_model_Udemy_Course_Succe
 cd Machine_Learning_model_Udemy_Course_Success_Predictor
 pip install -r requirements.txt 
 
-## 🙋‍♂️ Author
-
-Created by [Your Name](https://github.com/rootsiren).
